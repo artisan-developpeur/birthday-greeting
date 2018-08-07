@@ -1,0 +1,5 @@
+first_name, last_name, date_of_birth, email
+Benoit, Gantaume, 26/12/1979, benoit@artisandeveloppeur.fr
+John, Doe, 07/08/1900, john.doe@gmail.com
+Emile, Poli, , emile.poli@gmail.com
+No, Email
