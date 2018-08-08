@@ -9,7 +9,7 @@ import java.util.Calendar;
 public class Main {
 
     public static void main(String[] args) {
-        String fileName = "employees.txt";
+        String fileName = "../employees.txt";
         try {
             FileReader fileReader =  new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -31,8 +31,7 @@ public class Main {
                             if (date.length == 3) {
                                 Calendar cal = Calendar.getInstance();
                                 if (cal.get(Calendar.DATE) == Integer.parseInt(date[0]) && cal.get(Calendar.MONTH) == (Integer.parseInt(date[1])-1)) {
-                                    EmailRouter router = new EmailRouter();
-                                    router.sendEmail(tokens[3], "Joyeux Anniversaire !", "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
+                                    Main.sendEmail(tokens[3], "Joyeux Anniversaire !", "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
                                 }
                             } else {
                                 throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
@@ -54,5 +53,12 @@ public class Main {
         catch(IOException ex) {
             System.out.println("Error reading file '" + fileName + "'");
         }
+    }
+
+    public static void sendEmail(String to, String title, String body) {
+        System.out.println("Sending email to : " + to);
+        System.out.println("Title: " + title);
+        System.out.println("Body: Body\n" + body);
+        System.out.println("-------------------------");
     }
 }
