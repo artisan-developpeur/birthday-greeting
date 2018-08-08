@@ -34,7 +34,7 @@ public class Main {
                     }
                   
                     String[] date = tokens[2].split("/");
-                    if (date.length == 3) {
+                    if (date.length != 3) {
                         throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
                     }
                   
