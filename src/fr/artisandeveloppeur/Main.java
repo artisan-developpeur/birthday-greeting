@@ -21,26 +21,29 @@ public class Main {
               try {
                     if (first_line) {
                         first_line = false;
-                    } else {
-                        String[] tokens = line.split(",");
-                        for (int i = 0; i < tokens.length; i++)
-                            tokens[i] = tokens[i].trim();
+                        
+                        continue;
+                    } 
+                  
+                    String[] tokens = line.split(",");
+                    for (int i = 0; i < tokens.length; i++)
+                        tokens[i] = tokens[i].trim();
 
-                        if (tokens.length == 4 ) {
-                            String[] date = tokens[2].split("/");
-                            if (date.length == 3) {
-                                Calendar cal = Calendar.getInstance();
-                                if (cal.get(Calendar.DATE) == Integer.parseInt(date[0]) && cal.get(Calendar.MONTH) == (Integer.parseInt(date[1])-1)) {
-                                    EmailRouter router = new EmailRouter();
-                                    router.sendEmail(tokens[3], "Joyeux Anniversaire !", "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
-                                }
-                            } else {
-                                throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
-                            }
-                        } else {
-                            throw new Exception("Invalid file format");
-                        }
+                    if (tokens.length != 4 ) {
+                        throw new Exception("Invalid file format");
                     }
+                  
+                    String[] date = tokens[2].split("/");
+                    if (date.length == 3) {
+                        throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
+                    }
+                  
+                    Calendar cal = Calendar.getInstance();
+                    if (cal.get(Calendar.DATE) == Integer.parseInt(date[0]) && cal.get(Calendar.MONTH) == (Integer.parseInt(date[1])-1)) {
+                        EmailRouter router = new EmailRouter();
+                        router.sendEmail(tokens[3], "Joyeux Anniversaire !", "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
+                    }
+                    
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
