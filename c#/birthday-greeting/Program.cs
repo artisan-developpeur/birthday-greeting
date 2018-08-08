@@ -1,7 +1,4 @@
-// Merci à Ismaïl Nguyen pour la version C#!
-// https://www.linkedin.com/in/ismailnguyen/
-
-using System;
+﻿using System;
 using System.IO;
 
 namespace birthday_greeting
@@ -10,7 +7,7 @@ namespace birthday_greeting
     {
         static void Main(string[] args)
         {
-            String fileName = "../employees.txt";
+            String fileName = "employees.txt";
 
             try
             {
