@@ -1,44 +1,61 @@
+require_relative 'services/file_reader'
+require_relative 'services/date_parser'
+require_relative 'services/employee_factory'
+require_relative 'services/email_factory'
+require_relative 'services/email_sender'
 require 'date'
+
 class App
-  FILENAME = "../employees.txt"
+  EMPLOYEES_LIST_FILENAME = "../employees.txt"
+  EMPLOYEE_FILE_FIELDS = %i[first_name last_name birthdate email].freeze
+
+  def initialize(email_sender:, email_factory:, employee_factory:)
+    @email_sender = email_sender
+    @email_factory = email_factory
+    @employee_factory = employee_factory
+  end
 
   def run
-    File.open(FILENAME) do |file|
-      puts 'Reading file...'
-      first_line = true
-      file.each_line.with_index do |line, i|
-        begin
-          if first_line
-            first_line = false
-            next
-          end
-          columns = line.split(',')
-          raise "Invalid data format at line #{i}" unless columns.size == 4
-          first_name = columns[0].strip
-          last_name = columns[1].strip
-          names = [first_name, last_name].join(' ')
-          date = columns[2].strip
-          email_adress = columns[3].strip
-          raise "Cannot read birthdate for #{names}" unless date.split('/').size == 3
-          date = Date.parse(date)
-          next unless date == Date.today # Comment this line to test output
-          title = "Joyeux Anniversaire !"
-          body = "Bonjour #{first_name},\nJoyeux Anniversaire !\nA bientôt,"
-          send_email(email_adress, title, body)
-        rescue => e
-          puts e
-          next
-        end
+    employees_data = file_reader.read(EMPLOYEES_LIST_FILENAME)
+    employees_data.each do |employee_data|
+      begin
+        employee = employee_factory.build_from(employee_data)
+        next unless birthday_today?(employee)
+
+        send_greeting_email_to(employee)
+      rescue FileReader::DataError, EmployeeFactory::DataError => e
+        puts e.message
+        next
       end
     end
   end
 
-  def send_email(email_adress, title, body)
-    puts "Sending email to #{email_adress}"
-    puts "Title: #{title}"
-    puts "Body:\n#{body}"
-    puts "--------------"
+  private
+
+  attr_reader :email_sender, :email_factory, :employee_factory
+
+  def birthday_today?(employee)
+    employee.birthdate.yday == Date.today.yday
+  end
+
+  def send_greeting_email_to(employee)
+    email = email_factory.build_greeting_email(employee)
+    email_sender.send(email)
+  end
+
+  def file_reader
+    FileReader.new(EMPLOYEE_FILE_FIELDS)
   end
 end
 
-App.new.run
+date_parser      = DateParser.new
+employee_factory = EmployeeFactory.new(date_parser)
+email_factory    = EmailFactory.new
+email_sender     = EmailSender.new
+
+app = App.new(
+  employee_factory: employee_factory,
+  email_factory: email_factory,
+  email_sender: email_sender
+)
+app.run
