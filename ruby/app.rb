@@ -21,7 +21,7 @@ class App
           email_adress = columns[3].strip
           raise "Cannot read birthdate for #{names}" unless date.split('/').size == 3
           date = Date.parse(date)
-          next unless date == Date.today # Comment this line to test output
+          next unless date.yday == Date.today.yday # Comment this line to test output
           title = "Joyeux Anniversaire !"
           body = "Bonjour #{first_name},\nJoyeux Anniversaire !\nA bientôt,"
           send_email(email_adress, title, body)
