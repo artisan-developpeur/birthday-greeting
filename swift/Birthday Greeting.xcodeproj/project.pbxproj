@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		509B7B1D2456E02200A9B025 /* employees.txt in Resources */ = {isa = PBXBuildFile; fileRef = 509B7B1C2456E02200A9B025 /* employees.txt */; };
+		50B4E3E42456DB39004246DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4E3E32456DB39004246DB /* AppDelegate.swift */; };
+		50B4E3E82456DB39004246DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4E3E72456DB39004246DB /* ViewController.swift */; };
+		50B4E3ED2456DB3A004246DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B4E3EC2456DB3A004246DB /* Assets.xcassets */; };
+		50B4E3F02456DB3A004246DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B4E3EE2456DB3A004246DB /* LaunchScreen.storyboard */; };
+		50B4E3FB2456DB3A004246DB /* Birthday_GreetingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4E3FA2456DB3A004246DB /* Birthday_GreetingTests.swift */; };
+		50B4E4062456DB3A004246DB /* Birthday_GreetingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4E4052456DB3A004246DB /* Birthday_GreetingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50B4E3F72456DB3A004246DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50B4E3D82456DB39004246DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B4E3DF2456DB39004246DB;
+			remoteInfo = "Birthday Greeting";
+		};
+		50B4E4022456DB3A004246DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50B4E3D82456DB39004246DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B4E3DF2456DB39004246DB;
+			remoteInfo = "Birthday Greeting";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		509B7B1C2456E02200A9B025 /* employees.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = employees.txt; path = ../../../employees.txt; sourceTree = "<group>"; };
+		50B4E3E02456DB39004246DB /* Birthday Greeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birthday Greeting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B4E3E32456DB39004246DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50B4E3E72456DB39004246DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50B4E3EC2456DB3A004246DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50B4E3EF2456DB3A004246DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50B4E3F12456DB3A004246DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B4E3F62456DB3A004246DB /* Birthday GreetingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birthday GreetingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B4E3FA2456DB3A004246DB /* Birthday_GreetingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday_GreetingTests.swift; sourceTree = "<group>"; };
+		50B4E3FC2456DB3A004246DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B4E4012456DB3A004246DB /* Birthday GreetingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birthday GreetingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B4E4052456DB3A004246DB /* Birthday_GreetingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday_GreetingUITests.swift; sourceTree = "<group>"; };
+		50B4E4072456DB3A004246DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50B4E3DD2456DB39004246DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3F32456DB3A004246DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3FE2456DB3A004246DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50B4E3D72456DB39004246DB = {
+			isa = PBXGroup;
+			children = (
+				50B4E3E22456DB39004246DB /* Birthday Greeting */,
+				50B4E3F92456DB3A004246DB /* Birthday GreetingTests */,
+				50B4E4042456DB3A004246DB /* Birthday GreetingUITests */,
+				50B4E3E12456DB39004246DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50B4E3E12456DB39004246DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50B4E3E02456DB39004246DB /* Birthday Greeting.app */,
+				50B4E3F62456DB3A004246DB /* Birthday GreetingTests.xctest */,
+				50B4E4012456DB3A004246DB /* Birthday GreetingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50B4E3E22456DB39004246DB /* Birthday Greeting */ = {
+			isa = PBXGroup;
+			children = (
+				50B4E3E32456DB39004246DB /* AppDelegate.swift */,
+				50B4E3E72456DB39004246DB /* ViewController.swift */,
+				50B4E4132456DB48004246DB /* Resources */,
+			);
+			path = "Birthday Greeting";
+			sourceTree = "<group>";
+		};
+		50B4E3F92456DB3A004246DB /* Birthday GreetingTests */ = {
+			isa = PBXGroup;
+			children = (
+				50B4E3FA2456DB3A004246DB /* Birthday_GreetingTests.swift */,
+				50B4E3FC2456DB3A004246DB /* Info.plist */,
+			);
+			path = "Birthday GreetingTests";
+			sourceTree = "<group>";
+		};
+		50B4E4042456DB3A004246DB /* Birthday GreetingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50B4E4052456DB3A004246DB /* Birthday_GreetingUITests.swift */,
+				50B4E4072456DB3A004246DB /* Info.plist */,
+			);
+			path = "Birthday GreetingUITests";
+			sourceTree = "<group>";
+		};
+		50B4E4132456DB48004246DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				509B7B1C2456E02200A9B025 /* employees.txt */,
+				50B4E3EC2456DB3A004246DB /* Assets.xcassets */,
+				50B4E3EE2456DB3A004246DB /* LaunchScreen.storyboard */,
+				50B4E3F12456DB3A004246DB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50B4E3DF2456DB39004246DB /* Birthday Greeting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B4E40A2456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday Greeting" */;
+			buildPhases = (
+				50B4E3DC2456DB39004246DB /* Sources */,
+				50B4E3DD2456DB39004246DB /* Frameworks */,
+				50B4E3DE2456DB39004246DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Birthday Greeting";
+			productName = "Birthday Greeting";
+			productReference = 50B4E3E02456DB39004246DB /* Birthday Greeting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50B4E3F52456DB3A004246DB /* Birthday GreetingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B4E40D2456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday GreetingTests" */;
+			buildPhases = (
+				50B4E3F22456DB3A004246DB /* Sources */,
+				50B4E3F32456DB3A004246DB /* Frameworks */,
+				50B4E3F42456DB3A004246DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50B4E3F82456DB3A004246DB /* PBXTargetDependency */,
+			);
+			name = "Birthday GreetingTests";
+			productName = "Birthday GreetingTests";
+			productReference = 50B4E3F62456DB3A004246DB /* Birthday GreetingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50B4E4002456DB3A004246DB /* Birthday GreetingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B4E4102456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday GreetingUITests" */;
+			buildPhases = (
+				50B4E3FD2456DB3A004246DB /* Sources */,
+				50B4E3FE2456DB3A004246DB /* Frameworks */,
+				50B4E3FF2456DB3A004246DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50B4E4032456DB3A004246DB /* PBXTargetDependency */,
+			);
+			name = "Birthday GreetingUITests";
+			productName = "Birthday GreetingUITests";
+			productReference = 50B4E4012456DB3A004246DB /* Birthday GreetingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50B4E3D82456DB39004246DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = artisandeveloppeur;
+				TargetAttributes = {
+					50B4E3DF2456DB39004246DB = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					50B4E3F52456DB3A004246DB = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 50B4E3DF2456DB39004246DB;
+					};
+					50B4E4002456DB3A004246DB = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 50B4E3DF2456DB39004246DB;
+					};
+				};
+			};
+			buildConfigurationList = 50B4E3DB2456DB39004246DB /* Build configuration list for PBXProject "Birthday Greeting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50B4E3D72456DB39004246DB;
+			productRefGroup = 50B4E3E12456DB39004246DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50B4E3DF2456DB39004246DB /* Birthday Greeting */,
+				50B4E3F52456DB3A004246DB /* Birthday GreetingTests */,
+				50B4E4002456DB3A004246DB /* Birthday GreetingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50B4E3DE2456DB39004246DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B4E3F02456DB3A004246DB /* LaunchScreen.storyboard in Resources */,
+				50B4E3ED2456DB3A004246DB /* Assets.xcassets in Resources */,
+				509B7B1D2456E02200A9B025 /* employees.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3F42456DB3A004246DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3FF2456DB3A004246DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50B4E3DC2456DB39004246DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B4E3E82456DB39004246DB /* ViewController.swift in Sources */,
+				50B4E3E42456DB39004246DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3F22456DB3A004246DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B4E3FB2456DB3A004246DB /* Birthday_GreetingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B4E3FD2456DB3A004246DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B4E4062456DB3A004246DB /* Birthday_GreetingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50B4E3F82456DB3A004246DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B4E3DF2456DB39004246DB /* Birthday Greeting */;
+			targetProxy = 50B4E3F72456DB3A004246DB /* PBXContainerItemProxy */;
+		};
+		50B4E4032456DB3A004246DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B4E3DF2456DB39004246DB /* Birthday Greeting */;
+			targetProxy = 50B4E4022456DB3A004246DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50B4E3EE2456DB3A004246DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50B4E3EF2456DB3A004246DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50B4E4082456DB3A004246DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		50B4E4092456DB3A004246DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50B4E40B2456DB3A004246DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday Greeting/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-Greeting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50B4E40C2456DB3A004246DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday Greeting/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-Greeting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		50B4E40E2456DB3A004246DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday GreetingTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-GreetingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthday Greeting.app/Birthday Greeting";
+			};
+			name = Debug;
+		};
+		50B4E40F2456DB3A004246DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday GreetingTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-GreetingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthday Greeting.app/Birthday Greeting";
+			};
+			name = Release;
+		};
+		50B4E4112456DB3A004246DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday GreetingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-GreetingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Birthday Greeting";
+			};
+			name = Debug;
+		};
+		50B4E4122456DB3A004246DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4CQPKLYWJD;
+				INFOPLIST_FILE = "Birthday GreetingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.artisandeveloppeur.Birthday-GreetingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Birthday Greeting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50B4E3DB2456DB39004246DB /* Build configuration list for PBXProject "Birthday Greeting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B4E4082456DB3A004246DB /* Debug */,
+				50B4E4092456DB3A004246DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50B4E40A2456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday Greeting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B4E40B2456DB3A004246DB /* Debug */,
+				50B4E40C2456DB3A004246DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50B4E40D2456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday GreetingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B4E40E2456DB3A004246DB /* Debug */,
+				50B4E40F2456DB3A004246DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50B4E4102456DB3A004246DB /* Build configuration list for PBXNativeTarget "Birthday GreetingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B4E4112456DB3A004246DB /* Debug */,
+				50B4E4122456DB3A004246DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50B4E3D82456DB39004246DB /* Project object */;
+}
