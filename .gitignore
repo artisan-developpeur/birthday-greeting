@@ -115,3 +115,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+## Dart
+# Include /bin to be run
+!dart/bin/
