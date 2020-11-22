@@ -119,3 +119,7 @@ iOSInjectionProject/
 ## Dart
 # Include /bin to be run
 !dart/bin/
+
+## Rust
+rust/target
+rust/Cargo.lock
