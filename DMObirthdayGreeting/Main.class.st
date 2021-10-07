@@ -1,7 +1,7 @@
 Class {
 	#name : #Main,
 	#superclass : #Object,
-	#category : #DMObirthdayGreeting
+	#category : #'DMObirthdayGreeting-pharoSmalltalk'
 }
 
 { #category : #accessing }
