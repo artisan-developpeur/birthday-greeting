@@ -6,37 +6,42 @@ class App {
 
     try {
       if (fs.existsSync(fileName)) {
-        const byteStream = fs.readFileSync(fileName);
-        let content = byteStream.toString().split("\n");
+        const b = fs.readFileSync(fileName);
+        let content = b.toString().split("\n");
 
         console.log("Reading file...");
-        let first_line = true;
-        for (let line of content) {
-          if (first_line) {
-            first_line = false;
-          } else {
-            let tokens = line.split(",");
-            for (let i = 0; i < tokens.length; i++) {
-              tokens[i] = tokens[i].trim();
-            }
+        let fl = true;
+        for (let l of content) {
+          try {
+            if (fl) {
+              fl = false;
+            } else {
+              let t = l.split(",");
+              for (let i = 0; i < t.length; i++) {
+                t[i] = t[i].trim();
+              }
 
-            if (tokens.length == 4) {
-              const date = tokens[2].split("/");
-              if (date.length == 3) {
-                let now = new Date();
-                if (now.getDate() == Number.parseInt(date[0]) && now.getMonth() == Number.parseInt(date[1]) - 1) {
-                  App.sendEmail(
-                    tokens[3],
-                    "Joyeux Anniversaire !",
-                    "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,"
-                  );
+              if (t.length == 4) {
+                const d = t[2].split("/");
+                if (d.length == 3) {
+                  let n = new Date();
+                  if (n.getDate() == Number.parseInt(d[0]) && n.getMonth() == Number.parseInt(d[1]) - 1) {
+                    App.sendEmail(
+                      t[3],
+                      "Joyeux Anniversaire !",
+                      "Bonjour " + t[0] + ",\nJoyeux Anniversaire !\nA bientôt,"
+                    );
+                  }
+                } else {
+                  throw new Error("Cannot read birthdate for " + t[0] + " " + t[1]);
                 }
               } else {
-                throw new Error("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
+                throw new Error("Invalid file format");
               }
-            } else {
-              throw new Error("Invalid file format");
             }
+          } catch (e) {
+            console.log(e);
+            console.error("Error reading file '" + fileName + "'");
           }
         }
         console.log("Batch job done.");
@@ -45,7 +50,6 @@ class App {
       }
     } catch (error) {
       console.error("Error reading file '" + fileName + "'");
-      throw error;
     }
   }
 
