@@ -41,7 +41,7 @@ func main() {
 				if err != nil {
 					panic(err)
 				}
-				month, err := strconv.ParseInt(date[0], 10, 32)
+				month, err := strconv.ParseInt(date[1], 10, 32)
 				if err != nil {
 					panic(err)
 				}
