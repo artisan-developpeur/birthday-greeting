@@ -1,82 +1,78 @@
-﻿using System;
-using System.IO;
-
-namespace birthday_greeting
+﻿public static class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        String fileName = "employees.txt";
+
+        try
         {
-            String fileName = "employees.txt";
+            string[] lines = File.ReadAllLines(fileName);
 
-            try
+            Console.WriteLine("Reading file...");
+            Boolean first_line = true;
+            foreach (string line in lines)
             {
-                string[] lines = File.ReadAllLines(fileName);
-
-                Console.WriteLine("Reading file...");
-                Boolean first_line = true;
-                foreach (string line in lines)
+                try
                 {
-                    try
+                    if (first_line)
                     {
-                        if (first_line)
-                        {
-                            first_line = false;
-                        }
-                        else
-                        {
-                            String[] tokens = line.Split(',');
-                            for (int i = 0; i < tokens.Length; i++)
-                                tokens[i] = tokens[i].Trim();
+                        first_line = false;
+                    }
+                    else
+                    {
+                        String[] tokens = line.Split(',');
+                        for (int i = 0; i < tokens.Length; i++)
+                            tokens[i] = tokens[i].Trim();
 
-                            if (tokens.Length == 4)
+                        if (tokens.Length == 4)
+                        {
+                            String[] date = tokens[2].Split('/');
+                            if (date.Length == 3)
                             {
-                                String[] date = tokens[2].Split('/');
-                                if (date.Length == 3)
-                                {
-                                    DateTime cal = DateTime.Now;
+                                DateTime cal = DateTime.Now;
 
-                                    if (cal.Day == int.Parse(date[0]) && cal.Month == int.Parse(date[1]))
-                                    {
-                                        SendEmail(tokens[3], "Joyeux Anniversaire !", "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
-                                    }
-                                }
-                                else
+                                if (cal.Day == int.Parse(date[0]) && cal.Month == int.Parse(date[1]))
                                 {
-                                    throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
+                                    SendEmail(tokens[3], "Joyeux Anniversaire !",
+                                        "Bonjour " + tokens[0] + ",\nJoyeux Anniversaire !\nA bientôt,");
                                 }
                             }
                             else
                             {
-                                throw new Exception("Invalid file format");
+                                throw new Exception("Cannot read birthdate for " + tokens[0] + " " + tokens[1]);
                             }
                         }
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.StackTrace);
+                        else
+                        {
+                            throw new Exception("Invalid file format");
+                        }
                     }
                 }
-                Console.WriteLine("Batch job done.");
-            }
-            catch (FileNotFoundException ex)
-            {
-                Console.WriteLine("Unable to open file '" + fileName + "'");
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine("Error reading file '" + fileName + "'");
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.StackTrace);
+                }
             }
 
-            Console.ReadLine();
+            Console.WriteLine("Batch job done.");
         }
-
-        public static void SendEmail(String to, String title, String body)
+        catch (FileNotFoundException ex)
         {
-            Console.WriteLine("Sending email to : " + to);
-            Console.WriteLine("Title: " + title);
-            Console.WriteLine("Body: Body\n" + body);
-            Console.WriteLine("-------------------------");
+            Console.WriteLine("Unable to open file '" + fileName + "'");
         }
+        catch (IOException ex)
+        {
+            Console.WriteLine("Error reading file '" + fileName + "'");
+        }
+
+        Console.ReadLine();
+    }
+
+    public static void SendEmail(String to, String title, String body)
+    {
+        Console.WriteLine("Sending email to : " + to);
+        Console.WriteLine("Title: " + title);
+        Console.WriteLine("Body: Body\n" + body);
+        Console.WriteLine("-------------------------");
     }
 }
